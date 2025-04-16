@@ -1,13 +1,64 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + TS</title>
-  </head>
-  <body>
-    <div id="app"></div>
-    <script type="module" src="/src/main.ts"></script>
-  </body>
+    <head>
+        <meta charset="UTF-8" />
+        <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Movie ticket booking app</title>
+    </head>
+    <body>
+        <div class="container">
+            <h2>Pick a movie:</h2>
+
+            <select id="movie-select">
+                <option value="10">Avengers: Endgame ($10)</option>
+                <option value="12">Joker ($12)</option>
+                <option value="8">Toy Story 4 ($8)</option>
+                <option value="9">The Lion King ($9)</option>
+            </select>
+
+            <ul class="legend">
+                <li><span class="seat"></span> N/A</li>
+                <li><span class="seat selected"></span> Selected</li>
+                <li><span class="seat occupied"></span> Occupied</li>
+            </ul>
+
+            <div class="screen"></div>
+
+            <div class="all-seats">
+                <div class="row">
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                </div>
+
+                <div class="row">
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                    <div class="seat occupied"></div>
+                    <div class="seat occupied"></div>
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                </div>
+
+                <div class="row">
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                    <div class="seat occupied"></div>
+                    <div class="seat"></div>
+                </div>
+            </div>
+
+            <p class="text">
+                You have selected <span id="count">0</span> seats for a price of <span id="total">$0</span>
+            </p>
+        </div>
+
+        <script type="module" src="/src/scripts/main.ts" defer></script>
+    </body>
 </html>

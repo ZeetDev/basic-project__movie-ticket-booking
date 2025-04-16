@@ -1,0 +1,85 @@
+*,
+*::before,
+&::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100svh;
+    background: #111;
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    display: grid;
+    place-items: center;
+}
+
+.container {
+    width: 500px;
+    text-align: center;
+}
+
+select {
+    margin: 10px 0;
+    padding: 5px 10px;
+    font-size: 16px;
+    border-right: 10px solid transparent;
+}
+
+.legend {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    padding: 10px 0;
+    list-style: none;
+}
+
+.legend li {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 14px;
+}
+
+.seat {
+    background-color: #444;
+    height: 20px;
+    width: 20px;
+    margin: 3px;
+    border-radius: 5px;
+    display: inline-block;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.seat.selected {
+    background-color: #6feaf6;
+}
+
+.seat.occupied {
+    background-color: #fff;
+    cursor: not-allowed;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+}
+
+.screen {
+    background-color: #fff;
+    height: 50px;
+    margin: 20px auto;
+    width: 80%;
+    box-shadow: 0 3px 10px rgba(255, 255, 255, 0.5);
+}
+
+.text {
+    margin-top: 20px;
+    font-size: 16px;
+
+    span {
+        color: #6feaf6;
+    }
+}
